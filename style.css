@@ -158,3 +158,11 @@ footer {
 .price-label {
   color: #ffffff;   /* غيّر اللون هنا */
 }
+@media (max-width: 480px) {
+  #productName {
+    white-space: normal;   /* اسمح بالكسر في الهاتف */
+    text-align: center;
+  }
+}
+
+
