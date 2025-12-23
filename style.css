@@ -82,7 +82,7 @@ body {
 
 .order-section {
   background: var(--order-bg);
-  max-width: 420px;
+  max-width: 300px;
   margin: 25px auto;
   padding: 30px;
   border-radius: 22px;
@@ -170,3 +170,4 @@ footer {
 .order-form * {
   box-sizing: border-box;
 }
+
