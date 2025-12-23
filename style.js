@@ -5,7 +5,7 @@ const theme = {
 
   productName: {
     color: "#f5f0f0ff",
-    size: "38px"
+    size: "30px"
   },
 
   description: {
@@ -46,3 +46,4 @@ root.style.setProperty("--price-color", theme.price.color);
 root.style.setProperty("--order-bg", theme.order.background);
 root.style.setProperty("--order-title-color", theme.order.titleColor);
 root.style.setProperty("--order-title-size", theme.order.titleSize);
+
