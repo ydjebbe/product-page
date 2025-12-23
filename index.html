@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>صفحة طلب منتج</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <h1 id="productName"></h1>
+  <p id="description"></p>
+</header>
+
+<div class="image-box">
+  <img id="productImage" alt="صورة المنتج">
+</div>
+
+<div class="price-section">
+  <span class="price-label">السعر :</span>
+  <span id="price" class="price-value"></span>
+</div>
+
+<div class="order-section">
+  <h2 class="order-title">اطلب الآن</h2>
+
+  <form class="order-form" onsubmit="sendOrder(); return false;">
+    <input type="text" id="name" placeholder="الاسم الكامل">
+    <input type="text" id="phone" placeholder="رقم الهاتف">
+    <input type="text" id="address" placeholder="العنوان">
+    <button class="order-btn">إرسال الطلب</button>
+  </form>
+  <p class="order-note">
+    ⚠️ يجب أن يكون لديك واتساب لإتمام الطلب
+  </p>
+</div>
+
+<footer>©Yahia djebbes جميع الحقوق محفوظة</footer>
+
+<script src="config.js"></script>
+<script src="style.js"></script>
+
+<script>
+  productName.textContent = config.productName;
+  description.textContent = config.description;
+  price.textContent = config.price;
+  productImage.src = config.image;
+
+  function sendOrder() {
+    const name = document.getElementById("name").value;
+    const phone = document.getElementById("phone").value;
+    const address = document.getElementById("address").value;
+
+    if (!name || !phone || !address) {
+      alert("يرجى ملء جميع الحقول");
+      return;
+    }
+
+    const msg =
+      `طلب جديد:\nالاسم: ${name}\nالهاتف: ${phone}\nالعنوان: ${address}\nالمنتج: ${config.productName}\nالسعر: ${config.price}`;
+
+    window.open(`https://wa.me/${config.whatsapp}?text=${encodeURIComponent(msg)}`);
+  }
+</script>
+
+</body>
+</html>

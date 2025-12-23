@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+/* ===== متغيرات آمنة ===== */
+:root {
+  --bg-page: #2f2b33;
+
+  --product-name-color: #ffffff;
+  --product-name-size: 36px;
+
+  --desc-color: rgba(255,255,255,0.9);
+  --desc-size: 18px;
+
+  --image-bg: #5c6470;
+  --image-padding: 10px;
+
+  --price-color: #e53935;
+
+  --order-bg: #ffffff;
+  --order-title-color: #4b0082;
+  --order-title-size: 34px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Cairo', sans-serif;
+  background: var(--bg-page);
+  direction: rtl;
+}
+
+.hero {
+  text-align: center;
+  max-width: 420px;
+  margin: 40px auto 20px;
+}
+
+#productName {
+  font-size: var(--product-name-size);
+  color: var(--product-name-color);
+  font-weight: 800;
+
+  line-height: 1.2;        /* ⬅️ يقلل المسافة */
+  letter-spacing: 0.5px;  /* ⬅️ تنسيق أجمل */
+  white-space: nowrap;
+}
+
+
+#description {
+  font-size: var(--desc-size);
+  color: var(--desc-color);
+}
+
+.image-box {
+  background: var(--image-bg);
+  padding: var(--image-padding);
+  border-radius: 18px;
+  width: fit-content;
+  margin: 10px auto;
+}
+
+.image-box img {
+  border-radius: 14px;
+  max-width: 100%;
+}
+
+.price-section {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.price-label {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+}
+
+.price-value {
+  font-size: 36px;
+  color: var(--price-color);
+  font-family: 'Montserrat';
+}
+
+.order-section {
+  background: var(--order-bg);
+  max-width: 420px;
+  margin: 25px auto;
+  padding: 30px;
+  border-radius: 22px;
+}
+
+.order-title {
+  text-align: center;
+  font-size: var(--order-title-size);
+  color: var(--order-title-color);
+  font-weight: 800;
+}
+
+.order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.order-form input {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+}
+
+.order-btn {
+  padding: 16px;
+  border: none;
+  border-radius: 14px;
+  background: linear-gradient(135deg,#25D366,#1EBE5D);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  margin: 20px 0;
+}
+#productName {
+  white-space: nowrap !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.5px !important;
+}
+.image-box {
+  padding: 6px !important;
+  width: fit-content !important;
+}
+/* ===== ملاحظة الطلب ===== */
+.order-note {
+  margin-top: 14px;
+  text-align: center;
+  font-size: 14px;
+  color: #e53935;        /* أحمر تنبيهي */
+  font-weight: 600;
+}
+.order-section {
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.order-btn {
+  box-shadow: 0 6px 14px rgba(37,211,102,0.35);
+}
+.price-label {
+  font-size: 34px;   /* ⬅️ زِد أو نقص الرقم حسب ذوقك */
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+.price-value {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.price-label {
+  color: #ffffff;   /* غيّر اللون هنا */
+}
