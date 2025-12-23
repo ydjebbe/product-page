@@ -94,12 +94,15 @@ body {
   color: var(--order-title-color);
   font-weight: 800;
 }
-
 .order-form {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
+
 
 .order-form input {
   padding: 14px;
@@ -164,5 +167,6 @@ footer {
     text-align: center;
   }
 }
-
-
+.order-form * {
+  box-sizing: border-box;
+}
